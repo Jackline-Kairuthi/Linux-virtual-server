@@ -1,0 +1,13 @@
+[ec2-user@ip-172-31-74-190 home]$ sudo userdel Jake  -c "user is deleted, but his data remains in the system."
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Jane  Mariam  Peter  Raymond  Scarlet  Sky  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ id Jake
+id: ‘Jake’: no such user
+[ec2-user@ip-172-31-74-190 home]$ sudo userdel -r Alex  -c "deletes user and removes him from home directory."
+[ec2-user@ip-172-31-74-190 home]$ id Alex
+id: ‘Alex’: no such user
+[ec2-user@ip-172-31-74-190 home]$ sudo userdel -f Raymond  -c "forcefully deletes the user even if he is currently logged in"
+[ec2-user@ip-172-31-74-190 home]$ id raymond
+id: ‘raymond’: no such user
+[ec2-user@ip-172-31-74-190 home]$ ^C
+[ec2-user@ip-172-31-74-190 home]$ 
