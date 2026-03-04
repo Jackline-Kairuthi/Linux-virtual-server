@@ -46,5 +46,8 @@ Create a new user and add to an existing group <br/>
 
 <p align="center">Delete users <br/>
 <img width="745" height="398" alt="image" src="https://github.com/user-attachments/assets/ca94cbc7-2983-43db-9a07-d51b9ea777c5" />
+<br />
 
+<p align="center">Delete groups <br/>
+<img width="923" height="460" alt="image" src="https://github.com/user-attachments/assets/03a8b019-79ed-4c4d-ab56-fa802d67c0c7" />
 <br />
