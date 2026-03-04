@@ -8,3 +8,8 @@ Alex  Mariam  Raymond  ec2-user
 [ec2-user@ip-172-31-74-190 home]$ ls #go back to home directory to confirm if new users have been added
 Alex  Mariam  Peter  Raymond  Sky  ec2-user
 [ec2-user@ip-172-31-74-190 home]$ 
+
+[ec2-user@ip-172-31-74-190 ~]$ sudo useradd Jake
+[ec2-user@ip-172-31-74-190 ~]$ cd /home/
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Mariam  Peter  Raymond  Sky  ec2-user
