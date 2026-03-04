@@ -1,6 +1,16 @@
 <h1> Linux virtual Server </h1>
-Create a virtual Linux server on AWS
-Create, modify, and delete users on the server
+
+● Objective: Automate repetitive tasks using Bash scripting.
+
+● Learning Outcomes:
+Write scripts for creating users and groups.
+Manage permissions and automate file operations in Linux.
+
+● Scenario:
+You're part of an IT operations team tasked with setting up user accounts for a 
+new batch of employees. Using Bash scripting saves hours of manual work by 
+automating user creation and permission assignments
+
 
 <h2>Launching an EC2 instance:</h2>
 <p align="center">
@@ -21,5 +31,20 @@ AWS interface: <br/>
 
 <h2>Creating users and groups on the Linux server:</h2>
 <p align="center">
-Cluster column and Line chart: <br/>
-<img width="1796" height="453" alt="image" src="https://github.com/user-attachments/assets/3d58ece5-88b4-48b6-bf32-fadfd4510a19" />
+<br/>
+<img width="700" height="425" alt="image" src="https://github.com/user-attachments/assets/5b2dcdfa-ac4e-42f9-848f-ff42d5b5af76" />
+<br />
+
+<h2>Adding users to groups:</h2>
+<p align="center">
+Create a new user and add to an existing group <br/>
+<img width="764" height="264" alt="image" src="https://github.com/user-attachments/assets/137bb0be-3cd6-4842-a81b-de708c37cb94" />
+  
+<p align="center">Add users to an existing group <br/>
+<img width="940" height="334" alt="image" src="https://github.com/user-attachments/assets/10b6c699-8c64-4594-bb42-8e4e54547ab1" />
+<br />
+
+<p align="center">Delete users <br/>
+<img width="745" height="398" alt="image" src="https://github.com/user-attachments/assets/ca94cbc7-2983-43db-9a07-d51b9ea777c5" />
+
+<br />
