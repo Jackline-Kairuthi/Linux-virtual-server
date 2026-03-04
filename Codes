@@ -1,0 +1,10 @@
+[ec2-user@ip-172-31-74-190 ~]$ cd /home/
+[ec2-user@ip-172-31-74-190 home]$ ls  #Check existing users in the directory
+Alex  Mariam  Raymond  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ cd
+[ec2-user@ip-172-31-74-190 ~]$ sudo useradd Sky  #add new users
+[ec2-user@ip-172-31-74-190 ~]$ sudo useradd Peter #sudo is used to add new users as admin
+[ec2-user@ip-172-31-74-190 ~]$ cd /home/
+[ec2-user@ip-172-31-74-190 home]$ ls #go back to home account to confirm is new users have been added
+Alex  Mariam  Peter  Raymond  Sky  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ 
