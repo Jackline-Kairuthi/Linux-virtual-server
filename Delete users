@@ -1,0 +1,82 @@
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Jane  Mariam  Peter  Raymond  Scarlet  Sky  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ sudo userdel Peter -c "user is deleted, but his data remains in the system."
+userdel: invalid option -- 'c'
+Usage: userdel [options] LOGIN
+
+Options:
+  -f, --force                   force some actions that would fail otherwise
+                                e.g. removal of user still logged in
+                                or files, even if not owned by the user
+  -h, --help                    display this help message and exit
+  -r, --remove                  remove home directory and mail spool
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -Z, --selinux-user            remove any SELinux user mapping for the user
+
+
+
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Jane  Mariam  Peter  Raymond  Scarlet  Sky  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ sudo userdel -r Peter -c "deletes user and removes him from home directory."
+userdel: invalid option -- 'c'
+Usage: userdel [options] LOGIN
+
+Options:
+  -f, --force                   force some actions that would fail otherwise
+                                e.g. removal of user still logged in
+                                or files, even if not owned by the user
+  -h, --help                    display this help message and exit
+  -r, --remove                  remove home directory and mail spool
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -Z, --selinux-user            remove any SELinux user mapping for the user
+
+
+
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Jane  Mariam  Peter  Raymond  Scarlet  Sky  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ sudo userdel -f Peter -c "forcefully deletes the user even if he is currently logged in"
+userdel: invalid option -- 'c'
+Usage: userdel [options] LOGIN
+
+Options:
+  -f, --force                   force some actions that would fail otherwise
+                                e.g. removal of user still logged in
+                                or files, even if not owned by the user
+  -h, --help                    display this help message and exit
+  -r, --remove                  remove home directory and mail spool
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -Z, --selinux-user            remove any SELinux user mapping for the user
+
+
+
+
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Jane  Mariam  Peter  Raymond  Scarlet  Sky  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ ^C
+[ec2-user@ip-172-31-74-190 home]$ sudo userdel -f Peter
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Jane  Mariam  Peter  Raymond  Scarlet  Sky  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Jane  Mariam  Peter  Raymond  Scarlet  Sky  ec2-user
+
+
+
+[ec2-user@ip-172-31-74-190 home]$ user del Peter -f #Confirms the user "Peter" has been deleted
+-bash: user: command not found
+[ec2-user@ip-172-31-74-190 home]$ userdel -f Peter
+userdel: user 'Peter' does not exist
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Jane  Mariam  Peter  Raymond  Scarlet  Sky  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ sudo useradd Peter
+useradd: warning: the home directory /home/Peter already exists.
+useradd: Not copying any file from skel directory into it.
+Creating mailbox file: File exists
+[ec2-user@ip-172-31-74-190 home]$ sudo userdel -r Peter
+userdel: /var/spool/mail/Peter not owned by Peter, not removing
+userdel: /home/Peter not owned by Peter, not removing
+[ec2-user@ip-172-31-74-190 home]$ id Peter
+id: ‘Peter’: no such user
+[ec2-user@ip-172-31-74-190 home]$ 
