@@ -1,0 +1,26 @@
+[ec2-user@ip-172-31-74-190 ~]$ sudo groupadd Admins
+[ec2-user@ip-172-31-74-190 ~]$ sudo groupadd Service_desk
+
+## Create a new user and add to an existing group ##
+[ec2-user@ip-172-31-74-190 home]$ sudo useradd Scarlet -g Service_desk  
+[ec2-user@ip-172-31-74-190 home]$ cd /home/
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Jane  Mariam  Peter  Raymond  Scarlet  Sky  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ id Scarlet
+uid=1008(Scarlet) gid=1008(Service_desk) groups=1008(Service_desk)
+[ec2-user@ip-172-31-74-190 home]$ 
+
+## Add existing users to a group ##
+[ec2-user@ip-172-31-74-190 home]$ sudo usermod -G Admins Raymond -c "add existing user to a group."
+[ec2-user@ip-172-31-74-190 home]$ sudo usermod -G Admins Sky
+[ec2-user@ip-172-31-74-190 home]$ ls
+Alex  Jake  Jane  Mariam  Peter  Raymond  Scarlet  Sky  ec2-user
+[ec2-user@ip-172-31-74-190 home]$ id Raymond
+uid=1002(Raymond) gid=1002(Raymond) groups=1002(Raymond),1007(Admins)
+[ec2-user@ip-172-31-74-190 home]$ sudo usermod -G Admins Scarlet -c "Add Scarlet to a second group."
+[ec2-user@ip-172-31-74-190 home]$ id Scarlet
+uid=1008(Scarlet) gid=1008(Service_desk) groups=1008(Service_desk),1007(Admins)
+[ec2-user@ip-172-31-74-190 home]$ sudo usermod -g Admins Mariam
+[ec2-user@ip-172-31-74-190 home]$ id Mariam
+uid=1003(Mariam) gid=1007(Admins) groups=1007(Admins)
+[ec2-user@ip-172-31-74-190 home]$ 
