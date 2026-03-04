@@ -1,0 +1,3 @@
+[ec2-user@ip-172-31-74-190 home]$ sudo groupdel -f Admins
+[ec2-user@ip-172-31-74-190 home]$ sudo groupdel -f Service_desk
+[ec2-user@ip-172-31-74-190 home]$ 
